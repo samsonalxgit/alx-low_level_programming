@@ -1,7 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+/**
+ * main - print if the number is postive, zero, or negative
+ *
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
+ * Return: 0
+ */
 /* more headers goes there */
-
 /* betty style doc for function main goes there */
 int main(void)
 {
@@ -11,10 +18,16 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-		printf("is positive", n);
+	{
+		printf("%i is positive", n);
+	}
 	else if (n == 0)
-		printf("is zero", n);
+	{
+		printf("%i is zero", n);
+	}
 	else if (n < 0)
-		printf("is negative", n);
+	{
+		printf("%i is negative", n);
+	}
 	return (0);
 }
