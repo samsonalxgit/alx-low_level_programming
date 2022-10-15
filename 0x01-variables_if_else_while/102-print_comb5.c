@@ -1,8 +1,6 @@
 #include <stdio.h>
-
 /**
  * main - print all possible different combinations of three digits
- *
  * Description: using the main function
  * this program prints "012, 013, 014, 015, 016, 017, 018, 019, 023, ...
  * Return: 0
@@ -34,4 +32,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
