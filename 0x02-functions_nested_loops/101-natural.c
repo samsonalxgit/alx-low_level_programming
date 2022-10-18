@@ -1,13 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+*main - prints the addition of all numbers which are multiples of 3 and 5
+*below 1024
+*
+*Return: 0
+*/
 int main(void)
 {
+int n, a;
 
-	return (0);
+while (n < 1024)
+{
+if ((n % 3) == 0)
+{
+a = n + a;
+}
+else if ((n % 5) == 0)
+{
+a = n + a;
+}
+n++;
+}
+printf("%d\n", a);
+return (0);
 }
