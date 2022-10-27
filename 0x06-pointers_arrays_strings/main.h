@@ -1,5 +1,12 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
+
+/**
+ * File: main.h
+ * Desc: Header file containing prototypes for all projects
+ *
+ */
+#include <stdlib.h>
 
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
