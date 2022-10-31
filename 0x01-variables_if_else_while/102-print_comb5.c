@@ -1,34 +1,48 @@
 #include <stdio.h>
+
 /**
- * main - print all possible different combinations of three digits
- * Description: using the main function
- * this program prints "012, 013, 014, 015, 016, 017, 018, 019, 023, ...
- * Return: 0
+ * main - print pairs of double digit combos
+ *
+ * Description: print pairs of double digit combos
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i, p, m;
+	int i, j, k, m;
 
-	for (i = 0 ; i <= 9 ; i++)
+	i = 48;
+	while (i < 58)
 	{
-		for (p = 1 ; p <= 9 ; p++)
+		j = 48;
+		while (j < 58)
 		{
-			for (m = 2 ; m <= 9 ; m++)
+			m = j + 1;
+			k = i;
+			while (k < 58)
 			{
-				if (m > p && p > i)
+				while (m < 58)
 				{
-					putchar(i + '0');
-					putchar(p + '0');
-					putchar(m + '0');
-					if (i != 7)
+					putchar(i);
+					putchar(j);
+					putchar(32);
+					putchar(k);
+					putchar(m);
+					if (i < 57 || j < 56 || k < 57 || m < 57)
 					{
-						putchar(',');
-						putchar(' ');
+						putchar(44);
+						putchar(32);
 					}
+					m++;
 				}
+				m = 48;
+				k++;
 			}
+			j++;
 		}
+		i++;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
-}
+}}
