@@ -8,21 +8,24 @@
  * @value: The target value to be searched for
  * Return: The index of the target value, or -1 if not found
  */
+
 int linear_search(int *array, size_t size, int value)
 {
-	int position = 0;
+	size_t i;
+	int index = -1;
 
-	if (array == NULL)
-		return (-1);
+	if (!array)
+		return (index);
 
-
-	while (position < (int)size)
+	for (i = 0; i < size; i++)
 	{
-		printf("Value checked array[%d] = [%d]\n", position, array[position]);
-		if (array[position] == value)
-			return (position);
-
-		position++;
+		printf("Value checked array[%lu] = [%i]\n", i, array[i]);
+		if (array[i] == value)
+		{
+			index = (int)i;
+			break;
+		}
 	}
-	return (-1);
+
+	return (index);
 }
